@@ -20,7 +20,10 @@ There are nine receiving station in the 9x9 grid world indicated by 1, 2, 3, 4, 
 | 3 |   Y |    W |    W |    W |    W |    W |    W |    W |    Y |   
 | 2 |   W |    W |    G |    W |    G |    W |    G |    W |    W |   
 | 1 |   W |    W |    W |    W |    W |    W |    W |    W |    W |   
-|   |   a |    b |    c |    d |    e |    f |    g |    h |    i |    
+|   |   a |    b |    c |    d |    e |    f |    g |    h |    i | 
+- Y - yellow
+- W - white
+- G - green   
 ### Target Map:
 | 9 |    |     |    1 |    |    4 |     |    7 |     |     |   
 |:---------:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
