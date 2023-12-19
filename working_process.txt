@@ -1,0 +1,17 @@
+Init agent in position:*h4,w ,0,agent*
+agent in location *h3,w ,0,agent* do action down
+agent in location *g3,w ,0,agent* do action left
+agent in location *f3,w ,0,agent* do action left
+agent in location *e3,w ,0,agent* do action left
+agent in location *e2,gr,0,agent* do action down
+agent in location *e2,gr,0,agent* do action pickup 3
+agent in location *e3,w ,0,agent* do action up
+agent in location *e4,w ,0,agent* do action up
+agent in location *e5,w ,0,agent* do action up
+agent in location *e6,w ,0,agent* do action up
+agent in location *e7,w ,0,agent* do action up
+agent in location *d7,w ,0,agent* do action left
+agent in location *c7,w ,0,agent* do action left
+agent in location *b7,w ,0,agent* do action left
+agent in location *a7,y ,3,agent* do action left
+agent in location *a7,y ,3,agent* do action dropoff 3
