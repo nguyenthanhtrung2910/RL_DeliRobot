@@ -9,7 +9,7 @@ import DeliRobotEnv
 with open("controller.pkl", "rb") as file:
     control_system = dill.load(file)
 
-max_steps = 300    
+max_steps = 300   
 int2action = {0:'up',
               1:'right',
               2:'down',
@@ -21,7 +21,7 @@ env = gym.wrappers.FlattenObservation(env)
 
 state, info = env.reset()
 state = control_system.transform_state2scalar(state)
-print('Init agent in position:{}'.format(info['agent_location']), file=open('working_process.txt', 'w'))
+print('Init agent in position:{}'.format(info['agent_location']), file=open('working_process_example.txt', 'w'))
 step = 0
 truncated = False
 terminated = False
@@ -31,11 +31,11 @@ for step in range(max_steps):
       new_state, reward, terminated, truncated, info = env.step(action)
       new_state = control_system.transform_state2scalar(new_state)
       if action == 4:
-        print('agent in location {} do action {} {}'.format(info['agent_location'], int2action[action], info['mail']), file=open('working_process.txt', 'a'))
+        print('agent in location {} do action {} {}'.format(info['agent_location'], int2action[action], info['mail']), file=open('working_process_example.txt', 'a'))
       elif action == 5:
-        print('agent in location {} do action {} {}'.format(info['agent_location'], int2action[action], info['deliveried_mail']), file=open('working_process.txt', 'a'))
+        print('agent in location {} do action {} {}'.format(info['agent_location'], int2action[action], info['deliveried_mail']), file=open('working_process_example.txt', 'a'))
       else:
-        print('agent in location {} do action {}'.format(info['agent_location'], int2action[action]), file=open('working_process.txt', 'a')) 
+        print('agent in location {} do action {}'.format(info['agent_location'], int2action[action]), file=open('working_process_example.txt', 'a')) 
       if terminated or truncated:
         break
       state = new_state

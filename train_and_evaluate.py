@@ -14,7 +14,7 @@ learning_rate = 0.7          # Learning rate
 n_eval_episodes = 100        # Total number of test episodes
 
 # Environment parameters
-max_steps = 300               # Max steps per episode
+max_steps = 150               # Max steps per episode
 gamma = 0.95                 # Discounting rate
 eval_seed = []               # The evaluation seed of the environment
 

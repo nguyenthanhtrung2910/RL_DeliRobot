@@ -61,7 +61,8 @@ class DeliRobotEnv(gym.Env):
     def _get_info(self):
         return {'agent_location':self._agent_location,
                 'mail':self._mail,
-                'deliveried_mail':self._deliveried_mail} 
+                'deliveried_mail':self._deliveried_mail,
+                'count':self._count} 
       
     def reset(self, seed=None, options=None):
         # We need the following line to seed self.np_random
@@ -84,6 +85,17 @@ class DeliRobotEnv(gym.Env):
     
     def step(self, action):
         assert action in range(6)
+        if (self._agent_location.target == str(self._mail)) and (self._mail != 0) and (action == 5):
+            reward = 50
+        #punishment for illegal pickup   
+        elif ((self._agent_location not in self._green_cells) or (self._mail != 0)) and (action == 4):
+            reward = -10
+        #punishment for illegal dropoff   
+        elif ((self._agent_location.target != str(self._mail)) or (self._mail == 0)) and (action == 5):
+            reward = -10
+        else:
+            reward = -1 
+        
         if action == 0:
             if self._agent_location.front: 
                 if self._agent_location.front.color != 'y' or self._agent_location.front.target == str(self._mail):
@@ -109,18 +121,9 @@ class DeliRobotEnv(gym.Env):
                 self._mail = 0
                 self._count += 1
         self._agent_location.located = 'agent'
+
         # An episode is done if the agent has reached required mails
-        terminated = self._count == 1
-        if terminated:
-            reward = 50
-        #punishment for illegal pickup   
-        elif ((self._agent_location not in self._green_cells) or (self._mail != 0)) and (action == 4):
-            reward = -10
-        #punishment for illegal dropoff   
-        elif (self._agent_location.target != str(self._mail)) and (action == 5):
-            reward = -10
-        else:
-            reward = -1 
+        terminated = self._count == 3
 
         observation = self._get_obs()
         info = self._get_info()

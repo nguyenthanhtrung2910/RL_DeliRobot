@@ -1,0 +1,51 @@
+Init agent in position:*i9,w ,0,agent*
+agent in location *i8,w ,0,agent* do action down
+agent in location *h8,w ,0,agent* do action left
+agent in location *g8,w ,0,agent* do action left
+agent in location *g7,w ,0,agent* do action down
+agent in location *g6,w ,0,agent* do action down
+agent in location *f6,w ,0,agent* do action left
+agent in location *f5,w ,0,agent* do action down
+agent in location *e5,w ,0,agent* do action left
+agent in location *e4,w ,0,agent* do action down
+agent in location *e3,w ,0,agent* do action down
+agent in location *e2,gr,0,agent* do action down
+agent in location *e2,gr,0,agent* do action pickup 1
+agent in location *d2,w ,0,agent* do action left
+agent in location *c2,gr,0,agent* do action left
+agent in location *b2,w ,0,agent* do action left
+agent in location *b3,w ,0,agent* do action up
+agent in location *a3,y ,1,agent* do action left
+agent in location *a3,y ,1,agent* do action dropoff 1
+agent in location *b3,w ,0,agent* do action right
+agent in location *c3,w ,0,agent* do action right
+agent in location *c2,gr,0,agent* do action down
+agent in location *d2,w ,0,agent* do action right
+agent in location *e2,gr,0,agent* do action right
+agent in location *e2,gr,0,agent* do action pickup 2
+agent in location *e3,w ,0,agent* do action up
+agent in location *d3,w ,0,agent* do action left
+agent in location *c3,w ,0,agent* do action left
+agent in location *c4,w ,0,agent* do action up
+agent in location *b4,w ,0,agent* do action left
+agent in location *b5,w ,0,agent* do action up
+agent in location *a5,y ,2,agent* do action left
+agent in location *a5,y ,2,agent* do action dropoff 2
+agent in location *b5,w ,0,agent* do action right
+agent in location *c5,w ,0,agent* do action right
+agent in location *c4,w ,0,agent* do action down
+agent in location *c3,w ,0,agent* do action down
+agent in location *c2,gr,0,agent* do action down
+agent in location *d2,w ,0,agent* do action right
+agent in location *e2,gr,0,agent* do action right
+agent in location *e2,gr,0,agent* do action pickup 6
+agent in location *e3,w ,0,agent* do action up
+agent in location *e4,w ,0,agent* do action up
+agent in location *e5,w ,0,agent* do action up
+agent in location *f5,w ,0,agent* do action right
+agent in location *f6,w ,0,agent* do action up
+agent in location *g6,w ,0,agent* do action right
+agent in location *g7,w ,0,agent* do action up
+agent in location *h7,w ,0,agent* do action right
+agent in location *i7,y ,6,agent* do action right
+agent in location *i7,y ,6,agent* do action dropoff 6
