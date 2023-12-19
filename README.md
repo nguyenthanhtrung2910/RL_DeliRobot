@@ -8,7 +8,7 @@ The field of the environment consists of cells, each of them is instance of Cell
 The Delivery Robot (Agent) learns navigating to mail station in a grid world, picking mail up and dropping it off at one of nine receiving station.
 
 ### Description:
-There are nine receiving station in the 9x9 grid world indicated by 1, 2, 3, 4, 5, 6, 7, 8, 9. They are painted yellow. When the episode starts, the robot starts off at a random white cell. The robot drives to the mail station, picks up the mail, drives to the mail's destination (one of the nine specified locations), and then drops off the mail. Mail's destination are given randomly. Once the mail is dropped off, the episode ends (that we can modify after).
+There are nine receiving station in the 9x9 grid world indicated by 1, 2, 3, 4, 5, 6, 7, 8, 9. They are painted yellow. When the episode starts, the robot starts off at a random white cell. The robot drives to the mail station, picks up the mail, drives to the mail's destination (one of the nine specified locations), and then drops off the mail. Mail's destination are given randomly. Once robot deliveries 3 mails, the episode ends (that we can modify after).
 ### Color Map:
 | 9 |   W |    W |    Y |    W |    Y |    W |    Y |    W |    W |   
 |:---------:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
@@ -84,4 +84,4 @@ Run:
 ```
 python test.py
 ```
-to watch the control system work. During testing, the control system gives commands to the controlled object according to greed policy. The result of the robot's work process is described in a file "working_process.txt".
+to watch the control system work. During testing, the control system gives commands to the controlled object according to greed policy. The result of the robot's work process is described in a file "working_process_example.txt".
